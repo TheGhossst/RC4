@@ -17,6 +17,20 @@ def rc4_pseudo_random_generation(S, data):
     i, j = 0, 0
     result = []
     
+    for byte in data:
+        i = (i + 1) % 256
+        j = (j + S[i]) % 256
+        swap(S, i, j)
+        key_byte = S[(S[i] + S[j]) % 256]
+        result.append(key_byte ^ byte)
+
+    return result
+
+def rc4_algorithm(key, data):
+    key_scheduling = rc4_key_scheduling(key)
+    pseudo_random_data = rc4_pseudo_random_generation(key_scheduling, data)
+    return pseudo_random_data
+    
 def display_steps(steps):
     for step in steps:
         print(" ".join(format(byte, '02x') for byte in step))
