@@ -34,3 +34,11 @@ while True:
 XOR key_byte and the plain text
 
 # The question based on which rc4test.py is implemented on
+
+Assume a 4 x 3 bit key 'k' and plain text 'p' as given  
+``
+k=[1 2 3 6]
+``  
+``
+p=[1 2 2 2]
+``  
