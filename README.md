@@ -42,3 +42,4 @@ k=[1 2 3 6]
 ``
 p=[1 2 2 2]
 ``  
+Perform encryption using RC4 algorithm
