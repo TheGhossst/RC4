@@ -13,7 +13,20 @@ def rc4(key, plaintext):
         print("Value of j is ",j)
         print(f"After iteration {i+1} (KSA):", S)
     print("\n\n")
-    
+    # PRGA
+    i = j = 0
+    key_stream = []
+
+    for _ in range(len(plaintext)):
+        i = (i + 1) % 4
+        j = (j + S[i]) % 4
+        print("Value of i is ",i)
+        print("Value of j is ",j)
+        S[i], S[j] = S[j], S[i]
+        key_byte = S[(S[i] + S[j]) % 4]
+        key_stream.append(key_byte)
+        print(f"After iteration {_ + 1} (PRGA):", S)
+
     
     
     
