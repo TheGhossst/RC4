@@ -17,6 +17,10 @@ def rc4_pseudo_random_generation(S, data):
     i, j = 0, 0
     result = []
     
+def display_steps(steps):
+    for step in steps:
+        print(" ".join(format(byte, '02x') for byte in step))
+    
 def main():
     key = input("Enter the key as a string of ASCII characters : ")
     data = input("Enter the data to encrypt as a string of ASCII characters: ")
