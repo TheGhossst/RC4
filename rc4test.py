@@ -1,4 +1,9 @@
-
+def rc4(key, plaintext):
+    
+    
+    
+    
+    
 key = [1, 2, 3, 6]
 plaintext = [1, 2, 2, 2]
 
