@@ -6,7 +6,7 @@ Initialize a character array 'S' of size 256 or the key size
 ```bash
 for i in range(256): S[i] = i
  ```   
-# 2.KSA  
+# 2.Key Scheduling Algorithm (KSA)  
 A temp vector T is created    
 If key len is 256 then T=K    
 Else the first k-len elements of T are copied from K    
@@ -18,4 +18,14 @@ for i in range(256):
     j=(j+S[i]+T[i]) % 4
     swap(S,i,j)
 ```            
-
+# 3. Pseudo Random Generator Algorithm (PGRA)
+```bash
+while True:
+        i = (i + 1) % 256
+        j = (j + S[i]) % 256
+        swap(S, i, j)
+        key_byte = S[(S[i] + S[j]) % 256]
+        result.append(key_byte ^ byte)
+```
+# 4. Encryption Process
+XOR key_byte and the plain text
