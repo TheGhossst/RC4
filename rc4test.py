@@ -43,3 +43,40 @@ ciphertext = rc4(key, plaintext)
 print("\nKey:", key)
 print("Plaintext:", plaintext)
 print("Ciphertext:", ciphertext)
+
+"""
+Initial State (S): [0, 1, 2, 3]
+T =  [1, 2, 3, 6]
+Value of S[i] and T[i] is  0 1
+Value of j is  1
+After iteration 1 (KSA): [1, 0, 2, 3]
+Value of S[i] and T[i] is  0 2
+Value of j is  3
+After iteration 2 (KSA): [1, 3, 2, 0]
+Value of S[i] and T[i] is  2 3
+Value of j is  0
+After iteration 3 (KSA): [2, 3, 1, 0]
+Value of S[i] and T[i] is  0 6
+Value of j is  2
+After iteration 4 (KSA): [2, 3, 0, 1]
+
+
+
+Value of i is  1
+Value of j is  3
+After iteration 1 (PRGA): [2, 1, 0, 3]
+Value of i is  2
+Value of j is  3
+After iteration 2 (PRGA): [2, 1, 3, 0]
+Value of i is  3
+Value of j is  3
+After iteration 3 (PRGA): [2, 1, 3, 0]
+Value of i is  0
+Value of j is  1
+After iteration 4 (PRGA): [1, 2, 3, 0]
+Key Stream: [2, 0, 2, 0]
+
+Key: [1, 2, 3, 6]
+Plaintext: [1, 2, 2, 2]
+Ciphertext: [3, 2, 0, 2]
+"""
