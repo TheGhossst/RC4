@@ -27,7 +27,11 @@ def rc4(key, plaintext):
         key_stream.append(key_byte)
         print(f"After iteration {_ + 1} (PRGA):", S)
 
-    
+    print("Key Stream:", key_stream)
+
+    # XOR
+    ciphertext = [plaintext[i] ^ key_stream[i] for i in range(len(plaintext))]
+    return ciphertext
     
     
 key = [1, 2, 3, 6]
