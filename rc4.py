@@ -1,5 +1,17 @@
+def swap(array, i, j):
+    array[i], array[j] = array[j], array[i]
+
 def rc4_key_scheduling(key):
-    
+    key_length = len(key)
+    S = list(range(256))
+    i=0
+    j = 0
+
+    for i in range(256):
+        j = (j + S[i] + key[i % key_length]) % 256
+        swap(S, i, j)
+
+    return S
     
     
 def main():
