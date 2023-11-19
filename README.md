@@ -13,5 +13,9 @@ Else the first k-len elements of T are copied from K
 ```bash 
 T[i]=K[i mod(k-len)]
 ```    
-            
+```bash
+for i in range(256):
+    j=(j+S[i]+T[i]) % 4
+    swap(S,i,j)
+```            
 
