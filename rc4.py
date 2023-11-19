@@ -32,3 +32,12 @@ def main():
     pseudo_random_data = rc4_pseudo_random_generation(key_scheduling, data_bytes)
     steps.append(pseudo_random_data.copy())
     
+    print("\nKey Scheduling:")
+    display_steps(steps[0])
+    print("\nPseudo-random Data Generation:")
+    display_steps(steps[1])
+    print("\nFinal Result:")
+    display_steps(pseudo_random_data)
+
+if __name__ == "__main__":
+    main()
