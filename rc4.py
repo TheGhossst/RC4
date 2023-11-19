@@ -13,6 +13,9 @@ def rc4_key_scheduling(key):
 
     return S
     
+def rc4_pseudo_random_generation(S, data):
+    i, j = 0, 0
+    result = []
     
 def main():
     key = input("Enter the key as a string of ASCII characters : ")
@@ -25,3 +28,7 @@ def main():
 
     key_scheduling = rc4_key_scheduling(key_bytes)
     steps.append(key_scheduling.copy())
+    
+    pseudo_random_data = rc4_pseudo_random_generation(key_scheduling, data_bytes)
+    steps.append(pseudo_random_data.copy())
+    
