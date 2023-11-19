@@ -32,3 +32,5 @@ while True:
 ```
 # 4. Encryption Process
 XOR key_byte and the plain text
+
+# The question based on which rc4test.py is implemented on
