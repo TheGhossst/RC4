@@ -9,6 +9,9 @@ for i in range(256): S[i] = i
 # 2.Key Scheduling Algorithm (KSA)  
 A temp vector T is created    
 If key len is 256 then T=K    
+```bash
+T[i]=K[i]
+```
 Else the first k-len elements of T are copied from K    
 ```bash 
 T[i]=K[i mod(k-len)]
